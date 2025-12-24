@@ -1,4 +1,4 @@
-app.py
+2app.py
 import streamlit as st
 
 st.set_page_config(page_title="VITARA AETERNUM", layout="wide", page_icon="🌍")
@@ -52,3 +52,4 @@ with tabs[3]:
 st.success("**VITARA AETERNUM está activa. Tu camino a la vida eterna ha comenzado.**")
 
 st.caption("VITARA AETERNUM ∞ • 24 Diciembre 2025 • Eternamente 🌍🧬🩺⚡")
+Fix Final
