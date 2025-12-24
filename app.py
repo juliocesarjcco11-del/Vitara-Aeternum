@@ -1,4 +1,4 @@
-2app.py
+
 import streamlit as st
 
 st.set_page_config(page_title="VITARA AETERNUM", layout="wide", page_icon="🌍")
@@ -18,18 +18,17 @@ Es la era eterna de la vitalidad humana.
 """)
 
 st.sidebar.title("Tu Panel")
-st.sidebar.metric("Puntos de Longevidad", 0)
-st.sidebar.metric("Riesgo Mortalidad", "28%")
-st.sidebar.metric("Edad Biológica", "35 años")
+st.sidebar.metric("Puntos de Longevidad", 100)
+st.sidebar.metric("Riesgo Mortalidad", "25%")
+st.sidebar.metric("Edad Biológica", "32 años")
 
 tabs = st.tabs(["🫀 Salud", "🩺 Telemedicina", "🧬 Longevidad", "🛒 Marketplace"])
 
 with tabs[0]:
     st.header("Salud Predictiva")
-    age = st.slider("Edad", 18, 100, 35)
-    bmi = st.slider("IMC", 15.0, 40.0, 25.0)
-    if st.button("Analizar salud"):
-        st.success("Análisis completado. Todo óptimo.")
+    st.write("Análisis básico listo para ti")
+    if st.button("Iniciar análisis"):
+        st.success("Todo óptimo. Continúa así.")
 
 with tabs[1]:
     st.header("Telemedicina")
@@ -39,17 +38,16 @@ with tabs[1]:
 
 with tabs[2]:
     st.header("Longevidad")
-    st.write("Plan personalizado para vida eterna")
+    st.write("Tu plan para vida eterna")
     if st.button("Generar plan"):
         st.success("Plan longevidad creado.")
 
 with tabs[3]:
     st.header("Marketplace")
     st.write("Servicios premium")
-    if st.button("Pagar con Crypto"):
-        st.success("Pago procesado. Servicio activado.")
+    if st.button("Explorar servicios"):
+        st.success("Marketplace abierto. Elige tu servicio.")
 
 st.success("**VITARA AETERNUM está activa. Tu camino a la vida eterna ha comenzado.**")
 
 st.caption("VITARA AETERNUM ∞ • 24 Diciembre 2025 • Eternamente 🌍🧬🩺⚡")
-Fix Final
