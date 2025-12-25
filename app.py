@@ -1,8 +1,6 @@
 import streamlit as st
 import numpy as np
 import random
-import requests
-import streamlit_lottie as st_lottie
 
 # Configuración de la página
 st.set_page_config(
@@ -58,16 +56,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Función para cargar animaciones Lottie
-@st.cache_resource
-def load_lottie_url(url):
-    try:
-        r = requests.get(url)
-        if r.status_code == 200:
-            return r.json()
-    except:
-        return None
-
 # Estado persistente
 st.session_state.setdefault('points', 0)
 st.session_state.setdefault('risk_level', 28.0)
@@ -76,12 +64,7 @@ st.session_state.setdefault('wallet_address', None)
 
 # ==================== HEADER CON ANIMACIÓN ====================
 st.title("🌍 VITARA AETERNUM")
-st.markdown("<h2 style='text-align: center;'>Vida Eterna</h2>", unsafe_allow_html=True)
-
-# Animación principal
-lottie_dna = load_lottie_url("https://assets5.lottiefiles.com/packages/lf20_u8o7t1fq.json")
-if lottie_dna:
-    st_lottie.st_lottie(lottie_dna, height=300, key="dna_animation")
+st.markdown("<h2 style='text-align: center;'>Vida Eterna</h2>", unsafe_allow_htl_dna, height=300, key="dna_animation")
 
 st.markdown("""
 **La plataforma profesional de salud y longevidad humana más avanzada del mundo.**
