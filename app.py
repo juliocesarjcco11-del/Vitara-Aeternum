@@ -1,9 +1,10 @@
+
 import streamlit as st
 import numpy as np
 import random
 from web3 import Web3
-import streamlit_lottie as st_lottie  # Para animaciones interactivas
-import requests  # Para cargar Lottie JSON
+import streamlit_lottie as st_lottie
+import requests
 
 # Configuración de la página: profesional, impactante y responsiva
 st.set_page_config(
@@ -106,6 +107,10 @@ st.session_state.setdefault('chain', 'ethereum')
 st.title("🌍 VITARA AETERNUM")
 st.markdown("<h2 style='text-align: center;'>Vida Eterna</h2>", unsafe_allow_html=True)
 
+# Animación interactiva en header
+lottie_health = load_lottie_url("https://assets3.lottiefiles.com/packages/lf20_5k2r3m3v.json")  # Ejemplo Lottie health animation
+st_lottie.st_lottie(lottie_health, height=200, key="header_animation")
+
 st.markdown("""
 El servicio médico digital global definitivo.  
 **Medicina predictiva • Telemedicina • Genómica • Rejuvenecimiento**  
@@ -118,7 +123,7 @@ Desde 2025, guiando a la humanidad hacia una vida saludable sin límites.
 
 # ==================== SIDEBAR ====================
 with st.sidebar:
-    st.header("🔹 Tu Panel Personal")
+    st.header("🔹 Tu Panel personal")
     st.metric("Puntos de Longevidad", st.session_state.points)
     st.metric("Riesgo Mortalidad", f"{st.session_state.risk_level:.1f}%")
     st.metric("Edad Biológica", f"{st.session_state.bio_age:.1f} años")
