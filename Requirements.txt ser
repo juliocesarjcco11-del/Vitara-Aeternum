@@ -1,4 +1,8 @@
 streamlit
-numpy
+opencv-python-headless
+mediapipe
+pyttsx3
+googletrans==4.0.0-rc1
+langdetect
 web3
-plotly
+numpy
